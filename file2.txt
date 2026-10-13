@@ -1,0 +1,9 @@
+There it is: hello => 3. That also proves your cleaning step works, since “Hello”, “hello,” and “Hello” all collapsed into one word. The counter is done, and you built every piece of it yourself: read, clean, split, count.
+
+Next piece, only this: sort it. A word counter is more useful when the most common words come first.
+
+A Map has no built-in sorting, but you can turn it into an array and sort that. Look up [...map.entries()] (or Array.from(map)) and .sort() with a comparison function. Each entry is a [word, count] pair, so you’ll compare the second item of each pair.
+
+Try printing the top results, most frequent first. If you want a bigger test, paste a few paragraphs of any text into file.txt.
+
+Tell me what you get.

@@ -1,0 +1,20 @@
+{
+  "name": "typescript-read-file",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "A small TypeScript CLI that counts the most common words in a text file.",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js"
+  },
+  "keywords": ["typescript", "node", "word-counter"],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5"
+  }
+}

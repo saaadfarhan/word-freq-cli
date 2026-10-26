@@ -1,47 +1,47 @@
-# word-freq-cli
+# Word Frequency CLI
 
-A small Node.js command-line program that reads a text file and prints its most common words.
+A small TypeScript command-line tool that counts words in a local text file and prints the most frequent ones. It is a focused project for practicing file input, command-line arguments, maps, and sorting in Node.js.
 
 ## Requirements
 
-- Node.js 18 or newer
+- Node.js
 - pnpm
 
-## Setup
+## Install and build
 
-```bash
+```sh
 pnpm install
 pnpm build
 ```
 
 ## Usage
 
-The default input file is `file.txt` and the default output contains the five most common words:
+Run with the default input file, `file.txt`. The default output shows the five most frequent words:
 
-```bash
+```sh
 pnpm start
 ```
 
-Pass a different file as the first positional argument:
+Choose another text file:
 
-```bash
+```sh
 pnpm start -- file2.txt
 ```
 
-Use `--top` (or `-n`) to choose how many words to print:
+Choose how many results to show with `--top` or `-n`:
 
-```bash
+```sh
 pnpm start -- file.txt --top 10
+pnpm start -- file.txt -n 10
 ```
 
-The program lowercases words, removes punctuation, ignores a few common words, and sorts the results by frequency.
+The count is case-insensitive. The current tokenizer keeps English letters `a`–`z`, removes other characters, and skips these words: `a`, `it`, `is`, `and`, `the`, and `of`. Results are sorted from highest frequency to lowest. The tokenizer and stop-word list are fixed in this version.
 
-## Project structure
+## Project files
 
 ```text
-app.ts       CLI implementation
+app.ts       TypeScript CLI source
 file.txt     Example input
 file2.txt    Second example input
-dist/        Generated JavaScript and declaration files
+dist/        Generated output from the build
 ```
-
